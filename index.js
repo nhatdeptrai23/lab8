@@ -2,11 +2,27 @@ function init() {
     var user = document.getElementById("user");
     var check = document.getElementById("password2")
     var form = document.getElementById("form")
+    var buttonPopup = document.getElementById("rulePassword")
+
+    buttonPopup.addEventListener("click", showPopup)
     check.addEventListener("keyup", checkPass)
 
     form.addEventListener("submit", verifyPassword)
     user.addEventListener("mouseover", show);
     user.addEventListener("mouseout", hide);
+
+
+
+}
+function showPopup(){
+  var popup =document.getElementById("popup")
+  console.log("click")
+  if (popup.style.display === "none") {
+    popup.style.display = "inline";
+  } else {
+    popup.style.display = "none";
+  }
+
 }
 
 function show() {
@@ -31,6 +47,9 @@ const form = document.querySelector("form");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 });
+
+
+
 
 function checkPass() {
     if (document.getElementById('password1').value ==
@@ -62,6 +81,8 @@ function checkPass() {
        alert("Password is correct");  
     }  
   }  
+
+
 
 
 window.onload = init;

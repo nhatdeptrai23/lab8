@@ -132,3 +132,26 @@ label{
     color: #FFFFFF;
     border-radius: 10px;
 }
+
+#rulePassword{
+    margin-top: 5px;
+    width: 90px;
+    height: 30px;
+    background-color: #4F709B;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+#popup{
+    display: none;
+    position: absolute;
+    background-color: #D8C4B6;
+    padding: 20px;
+    /* width: 400px;
+    height: 300px; */
+    top: 40%;
+    left:35%;
+    border:1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

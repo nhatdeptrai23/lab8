@@ -19,23 +19,32 @@
 	<form id="form" method="post" action="">
 		<h2 class="user-infor">Account Information</h2>
 		<p class="account-input "><label>User ID</label>
-				<input id="user" type="text" name="uid" />
+				<input id="user" type="email" name="uid" required />
 				<span id="sidTip">Student ID</span>
 				
 		</p>
 		<p class="account-input"><label>Password</label>
-				<input type="password" name="pwd1" id="password1" placeholder="At least 12 characters " />
-				<button id="togglePassword">Show</button>
+				<input type="password" name="pwd1" id="password1" placeholder="At least 12 characters "  required/>
+				<div>
+					<button id="togglePassword">Show</button>
+					<button id="rulePassword">Rule</button>
+				</div>
+				<div id="popup">
+					(1) All input fields must not be empty;<br>
+					(2) User ID must contain at one ‘@’ symbol to be a valid email address;<br>
+					(3) Password and retype password must have the same value; and<br>
+					(4) Name must be letters and spaces only.<br>
+				</div>
 				<span id='message1'></span>
 		</p>
 		<p class="account-input">	<label>Retype Password</label>
-				<input id="password2" type="password" name="pwd2" />
+				<input id="password2" type="password" name="pwd2" required />
 				<span id='message'></span>
 		</p>
 
 		<h2 class="user-infor">User Information</h2>
 		<p>	<label>Name</label>
-				<input type="text" name="username" />
+				<input type="text" name="username" pattern="[A-Za-z ]*" required/>
 		</p>
 		<div class="radio-check">
 				<div class="check1">
